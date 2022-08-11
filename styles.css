@@ -1,0 +1,149 @@
+:root {
+  font-size: 16px;
+  font-family: monospace;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+body {
+  background-color: #ebebeb;
+  backdrop-filter: sepia(0.2);
+}
+
+.container {
+  display: flex;
+  flex-flow: row;
+  height: 100%;
+  width: 100vw;
+
+  background-image: url(assets/pawel-czerwinski-IskA3TGmyGk-unsplash\ mod.jpg);
+  filter: sepia(0.2);
+
+  background-size: auto 100vh;
+  background-repeat: repeat;
+}
+
+.right-container {
+  display: flex;
+  /* background-color: rgba(137, 43, 226, 0.267); */
+  width: 50vw;
+  justify-content: center;
+  align-items: center;
+}
+
+.left-container {
+  /* background-color: rgba(179, 126, 57, 0.267); */
+  z-index: 2;
+  height: 100vh;
+  width: 50vw;
+  display: flex;
+  align-items: flex-end;
+}
+
+.credit-wrapper {
+  position: fixed;
+  bottom: 16px;
+  left: 16px;
+}
+
+.textContainer {
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  background-color: #ffe54c;
+  height: 75vh;
+  width: max(25vw, 35vw);
+  gap: 3vh;
+  padding: 2vw;
+  box-shadow: 15px 15px 1px #ffbb00, 15px 15px 1px 2px rgb(0, 0, 1);
+  border: 2px black solid;
+  font-weight: 1;
+}
+
+form {
+  display: flex;
+  flex-flow: column;
+  gap: 1vh;
+}
+
+input:valid {
+  box-shadow: 0 5px rgb(36, 250, 54);
+  height: 30px;
+  font-family: inherit;
+  font-size: 16px;
+  width: 250px;
+  background-color: wheat;
+  border: 0.5px grey dashed;
+}
+
+input:not(:focus):invalid {
+  height: 30px;
+  font-family: inherit;
+  font-size: 16px;
+  width: 250px;
+  background-color: wheat;
+  border: 0.5px grey dashed;
+  box-shadow: 0 5px rgb(255, 195, 83);
+}
+
+input:invalid {
+  box-shadow: 0 5px rgb(255, 83, 83);
+  height: 30px;
+  font-family: inherit;
+  font-size: 16px;
+  width: 250px;
+  background-color: wheat;
+  border: 0.5px grey dashed;
+}
+
+.passReq ul,
+.passReq p {
+  font-family: inherit;
+  font-size: 14px;
+}
+
+button {
+  width: 125px;
+  height: 50px;
+  background-color: wheat;
+  border: 2px black solid;
+  box-shadow: 5px 5px 1px #ffbb00, 5px 5px 1px 2px rgb(0, 0, 1);
+  font-family: inherit;
+  font-size: inherit;
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 1rem;
+}
+
+@media only screen and (max-width: 820px) {
+  .container {
+    display: flex;
+    justify-content: center;
+  }
+  .right-container {
+    width: 80%;
+    font-size: 14px;
+  }
+
+  .textContainer {
+    width: 80%;
+  }
+
+  .left-container {
+    width: 0;
+  }
+
+  .credit {
+    font-size: 12px;
+  }
+
+  input {
+    width: 200px;
+  }
+}
